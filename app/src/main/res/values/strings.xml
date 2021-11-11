@@ -1,3 +1,23 @@
 <resources>
-    <string name="app_name">ccm</string>
+    <string name="app_name">Chronic Condition Management</string>
+    <string name="beginSurvey">Begin Survey</string>
+    <string name="mainScreenStr">Main Menu</string>
+    <string name="ccmExplanation">A brief survey to annotate cognition</string>
+    <string name="qYear">What is the year?</string>
+    <string name="qSeason">What is the season?</string>
+    <string name="qDay">What is the weekday?</string>
+    <string name="next">Next</string>
+    <string name="qDate">What is the date?  (mmddyyyy)</string>
+    <string name="qMonth">What is the month?</string>
+    <string name="qWhere">Where are you now?</string>
+    <string name="qState">What State are we in?</string>
+    <string name="qWorld">Spell \"WORLD\" backwards</string>
+    <string name="threeObjectsString">Type in the three boxes the first three things you see</string>
+    <string name="surveyAnswersText">Survey Complete!</string>
+    <string name="q3ObjectsRepeat">What were the three objects you typed two screens ago?</string>
+    <string name="mainMenu">Main Menu</string>
+    <string name="cogSurvey">Cognition Survey</string>
+    <string name="cogSurveyDesc">The cognition survey is a brief test to survey daily cognition</string>
+
+
 </resources>
