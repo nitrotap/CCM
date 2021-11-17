@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/P51/AndroidStudioProjects/CCM/app/src/main/res/layout/activity_main.xml" value="0.4363636212309535" />
+        <entry key="..\:/Users/P51/Desktop/Code/CCM/app/src/main/res/layout/activity_main.xml" value="0.2942708333333333" />
+        <entry key="..\:/Users/P51/Desktop/Code/CCM/app/src/main/res/layout/activity_survey.xml" value="0.2942708333333333" />
+        <entry key="..\:/Users/P51/Desktop/Code/CCM/app/src/main/res/layout/fragment_q3questions.xml" value="0.2942708333333333" />
+        <entry key="..\:/Users/P51/Desktop/Code/CCM/app/src/main/res/layout/fragment_q_dayofweek.xml" value="0.25" />
       </map>
     </option>
   </component>
