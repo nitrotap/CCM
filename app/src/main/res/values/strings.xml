@@ -16,8 +16,22 @@
     <string name="surveyAnswersText">Survey Complete!</string>
     <string name="q3ObjectsRepeat">What were the three objects you typed two screens ago?</string>
     <string name="mainMenu">Main Menu</string>
+    <string name="sun">Sunday</string>
+    <string name="mon">Monday</string>
+    <string name="tue">Tuesday</string>
+    <string name="wed">Wednesday</string>
+    <string name="thu">Thursday</string>
+    <string name="fri">Friday</string>
+    <string name="sat">Saturday</string>
+
+
     <string name="cogSurvey">Cognition Survey</string>
     <string name="cogSurveyDesc">The cognition survey is a brief test to survey daily cognition</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="first_answer">First Answer</string>
+    <string name="third_answer">Third Answer</string>
+    <string name="second_answer">Second Answer</string>
 
 
 </resources>

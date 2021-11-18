@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout_qdayofweek"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    app:layout_anchorGravity="center_horizontal"
+    tools:context=".qDayofweek">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="70dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="67dp"
+            android:text="@string/qDay"
+            android:textSize="24sp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="28dp">
+
+            <RadioButton
+                android:id="@+id/radioButton_sunday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sun"
+                tools:layout_editor_absoluteX="92dp"
+                tools:layout_editor_absoluteY="123dp" />
+
+            <RadioButton
+                android:id="@+id/radioButton_monday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mon"
+                tools:layout_editor_absoluteX="221dp"
+                tools:layout_editor_absoluteY="123dp" />
+
+            <RadioButton
+                android:id="@+id/radioButton_tuesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tue"
+                tools:layout_editor_absoluteX="92dp"
+                tools:layout_editor_absoluteY="192dp" />
+
+            <RadioButton
+                android:id="@+id/radioButton_wednesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wed"
+                tools:layout_editor_absoluteX="221dp"
+                tools:layout_editor_absoluteY="192dp" />
+
+            <RadioButton
+                android:id="@+id/radioButton_thursday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/thu"
+                tools:layout_editor_absoluteX="92dp"
+                tools:layout_editor_absoluteY="266dp" />
+
+            <RadioButton
+                android:id="@+id/radioButton_friday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fri"
+                tools:layout_editor_absoluteX="221dp"
+                tools:layout_editor_absoluteY="266dp" />
+
+            <RadioButton
+                android:id="@+id/radioButton_saturday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sat"
+                tools:layout_editor_absoluteX="162dp"
+                tools:layout_editor_absoluteY="342dp" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="25dp"
+            android:text="@string/next" />
+
+    </LinearLayout>
+
+</FrameLayout>
