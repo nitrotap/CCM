@@ -49,7 +49,7 @@ public class qSpeedofthought extends Fragment {
 
             FragmentManager fm1 = getParentFragmentManager();
             FragmentTransaction ft1 = fm1.beginTransaction();
-            ft1.replace(R.id.fragmentContainerView, qSpeedofthought.class, null); // todo update
+            ft1.replace(R.id.fragmentContainerView, surveyEnd.class, null); // todo update
             ft1.commit();
 
         });

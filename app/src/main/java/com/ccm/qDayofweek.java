@@ -16,7 +16,7 @@ import android.widget.Toast;
 
 public class qDayofweek extends Fragment {
 
-    String answer_dayofweek;
+    public static String answer_dayofweek;
 
 
     public qDayofweek() {

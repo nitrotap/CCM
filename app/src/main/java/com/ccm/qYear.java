@@ -16,7 +16,7 @@ import android.widget.Toast;
 public class qYear extends Fragment {
 
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    public String answer_qyear;
+    public static String answer_qyear;
 
 
     public qYear() {

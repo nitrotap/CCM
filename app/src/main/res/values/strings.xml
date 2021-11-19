@@ -13,7 +13,7 @@
     <string name="qState">What State are we in?</string>
     <string name="qWorld">Spell \"WORLD\" backwards</string>
     <string name="threeObjectsString">Type in the three boxes the first three things you see:</string>
-    <string name="surveyAnswersText">Survey Complete!</string>
+    <string name="surveyComplete">Survey Complete!</string>
     <string name="q3ObjectsRepeat">What were the three objects you typed two screens ago?</string>
     <string name="mainMenu">Main Menu</string>
     <string name="sun">Sunday</string>
