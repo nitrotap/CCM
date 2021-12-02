@@ -20,14 +20,5 @@ public class SurveyActivity extends AppCompatActivity {
     }
 
 
-
-
-
-
-
-
-
-
-
-
 }
+

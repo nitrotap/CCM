@@ -56,36 +56,47 @@ public class surveyEnd extends Fragment {
         int year = calendar.get(Calendar.YEAR);
         String dayOfWeek = String.valueOf(calendar.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.getDefault()));
 
-
-
-
-        surveyUserAnswers = "Day of week: " + qDayofweek.answer_dayofweek + "Correct Answer: " + dayOfWeek +
+        surveyUserAnswers = "Day of week: " + qDayofweek.answer_dayofweek + "          Correct Answer: " + dayOfWeek +
                 "\nGrandiose Thoughts: " + qGrandthoughts.answer_qgrand +
                 "\nHappy Speed of Thoughts: " + qSpeedofthought.answer_qthoughtshappy +
                 "\nSad Speed of Thoughts: " + qSpeedofthought.answer_qthoughtssad +
-                "\nYear: " + qYear.answer_qyear + "Correct Answer: " + year +
+                "\nYear: " + qYear.answer_qyear + "     Correct Answer: " + year +
                 "\nTime Taken: " + surveyTime + " seconds";
         textView.setText(surveyUserAnswers);
+
+        int score = 0;
+        if (qDayofweek.answer_dayofweek.equals(dayOfWeek)) {
+            score++;
+        }
+        if (qGrandthoughts.answer_qgrand.equals("Yes")) {
+            score++;
+        }
+        if (qSpeedofthought.answer_qthoughtssad.equals("Yes")) {
+            score++;
+        }
+        if (qSpeedofthought.answer_qthoughtshappy.equals("Yes")) {
+            score++;
+        }
+        if (surveyTime > 60) {
+            score++;
+        }
+
+        String grade;
+        if (score >= 4) {
+            grade = "Severe Cognitive Impairment";
+        } else if (score >= 1) {
+            grade = "Mild Cognitive Impairment";
+        } else {
+            grade = "No Cognitive Impairment";
+        }
+
+        TextView textView1 = view.findViewById(R.id.textView_surveygrade);
+        textView1.setText(grade);
 
         return view;
     }
 
-    public static void surveyGrader() {
-        Date date = new Date();
-        Calendar calendar = new GregorianCalendar();
-        calendar.setTime(date);
-        int year = calendar.get(Calendar.YEAR);
-        String dayOfWeek = String.valueOf(calendar.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.getDefault()));
-
-        // month = calendar.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
-        // monthNum = calendar.get(Calendar.MONTH) + 1;
-        // dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH);
-        // rightDate = String.format(Locale.US, "%02d", monthNum) + String.format(Locale.US, "%02d", dayOfMonth) + year;
-
-    }
-    
-
-
-
 
 }
+
+
