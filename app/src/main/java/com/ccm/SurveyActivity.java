@@ -8,6 +8,7 @@ import android.os.Bundle;
 public class SurveyActivity extends AppCompatActivity {
 
     FragmentManager fm;
+    public static long surveyStartTime = System.currentTimeMillis();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
