@@ -64,7 +64,7 @@ public class qGrandthoughts extends Fragment {
         return view;
     }
 
-    private void radioGroupCheckedYesNo(View view) {
+    public void radioGroupCheckedYesNo(View view) {
         RadioGroup radioGroup = getActivity().findViewById(R.id.radioGroup_yesno);
         int checked = radioGroup.getCheckedRadioButtonId();
         if (checked == R.id.radioButton_grandyes) {

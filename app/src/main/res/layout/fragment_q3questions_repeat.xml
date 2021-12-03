@@ -4,39 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".q3questions">
+    tools:context=".q3questions_repeat">
 
+    <!-- TODO: Update blank fragment layout -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textView_q3questions"
+            android:id="@+id/textView_q3questions_repeat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:text="@string/threeObjectsString"
+            android:layout_marginTop="16dp"
+            android:text="@string/q3ObjectsRepeat"
             android:textAlignment="center"
             android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/q3answer1"
+            android:id="@+id/q3answer1_repeat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="52dp"
             android:ems="10"
-            android:inputType="textAutoCorrect"
+            android:inputType="textShortMessage|textAutoComplete"
             android:minHeight="48dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView_q3questions" />
+            app:layout_constraintTop_toBottomOf="@+id/textView_q3questions_repeat" />
 
         <EditText
-            android:id="@+id/q3answer2"
+            android:id="@+id/q3answer2_repeat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="38dp"
@@ -45,28 +45,33 @@
             android:minHeight="48dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/q3answer1" />
+            app:layout_constraintTop_toBottomOf="@+id/q3answer1_repeat" />
 
         <EditText
-            android:id="@+id/q3answer3"
+            android:id="@+id/q3answer3_repeat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="39dp"
             android:ems="10"
-            android:inputType="textAutoCorrect"
+            android:inputType="textShortMessage|textAutoComplete"
             android:minHeight="48dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/q3answer2" />
+            app:layout_constraintTop_toBottomOf="@+id/q3answer2_repeat" />
 
         <Button
-            android:id="@+id/button_q3questions"
+            android:id="@+id/button_q3questions_repeat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="39dp"
             android:text="@string/next"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/q3answer3" />
+            app:layout_constraintTop_toBottomOf="@+id/q3answer3_repeat" />
+
+
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </FrameLayout>

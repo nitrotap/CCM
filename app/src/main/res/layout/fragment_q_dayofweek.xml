@@ -4,15 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/frameLayout_qdayofweek"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_gravity="center"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
     app:layout_anchorGravity="center_horizontal"
     tools:context=".qDayofweek">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="70dp"
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
@@ -20,7 +19,7 @@
             android:id="@+id/textView_qdayofweek"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="67dp"
+            android:layout_marginTop="24dp"
             android:text="@string/qDay"
             android:textSize="24sp" />
 
@@ -28,8 +27,7 @@
             android:id="@+id/radioGroupWeek"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="28dp">
+            android:layout_marginTop="12dp">
 
             <RadioButton
                 android:id="@+id/radioButton_sunday"
@@ -93,7 +91,6 @@
             android:id="@+id/button_qDayofweek"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
             android:layout_marginTop="25dp"
             android:text="@string/next" />
 

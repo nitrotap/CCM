@@ -16,6 +16,7 @@
     <string name="surveyComplete">Survey Complete!</string>
     <string name="q3ObjectsRepeat">What were the three objects you typed two screens ago?</string>
     <string name="mainMenu">Main Menu</string>
+
     <string name="sun">Sunday</string>
     <string name="mon">Monday</string>
     <string name="tue">Tuesday</string>
@@ -26,7 +27,6 @@
 
     <string name="cogSurvey">Cognition Survey</string>
     <string name="cogSurveyDesc">The cognition survey is a brief test to survey daily cognition</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="first_answer">First Answer</string>
     <string name="third_answer">Third Answer</string>
     <string name="second_answer">Second Answer</string>
@@ -36,6 +36,9 @@
     <string name="no">No</string>
     <string name="qspeedhappy">Are the happy feelings speeding up your thought process today?</string>
     <string name="qspeedsad">Are the sad feelings slowing down your thought process today?</string>
+    <string name="qbrainfog">Are you experiencing any brain fog today?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

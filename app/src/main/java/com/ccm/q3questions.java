@@ -23,13 +23,6 @@ public class q3questions extends Fragment {
         // Required empty public constructor
     }
 
-    public static q3questions newInstance() {
-        q3questions fragment = new q3questions();
-        Bundle args = new Bundle();
-        fragment.setArguments(args);
-        return fragment;
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

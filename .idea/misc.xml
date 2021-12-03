@@ -3,11 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/P51/AndroidStudioProjects/CCM/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/P51/AndroidStudioProjects/CCM/app/src/main/res/layout/activity_survey.xml" value="0.2942708333333333" />
-        <entry key="..\:/Users/P51/AndroidStudioProjects/CCM/app/src/main/res/layout/fragment_q3questions.xml" value="0.2942708333333333" />
+        <entry key="..\:/Users/P51/AndroidStudioProjects/CCM/app/src/main/res/layout/fragment_q3questions.xml" value="0.21818181061547676" />
+        <entry key="..\:/Users/P51/AndroidStudioProjects/CCM/app/src/main/res/layout/fragment_q3questions_repeat.xml" value="0.2222222222222222" />
+        <entry key="..\:/Users/P51/AndroidStudioProjects/CCM/app/src/main/res/layout/fragment_q_brainfog.xml" value="0.1" />
+        <entry key="..\:/Users/P51/AndroidStudioProjects/CCM/app/src/main/res/layout/fragment_q_dayofweek.xml" value="0.15677083333333333" />
+        <entry key="..\:/Users/P51/AndroidStudioProjects/CCM/app/src/main/res/layout/fragment_q_grandthoughts.xml" value="0.21818181061547676" />
         <entry key="..\:/Users/P51/AndroidStudioProjects/CCM/app/src/main/res/layout/fragment_q_speedofthought.xml" value="0.2942708333333333" />
         <entry key="..\:/Users/P51/AndroidStudioProjects/CCM/app/src/main/res/layout/fragment_q_year.xml" value="0.2942708333333333" />
-        <entry key="..\:/Users/P51/AndroidStudioProjects/CCM/app/src/main/res/layout/fragment_survey_end.xml" value="0.26827094474153296" />
+        <entry key="..\:/Users/P51/AndroidStudioProjects/CCM/app/src/main/res/layout/fragment_survey_end.xml" value="0.4363636212309535" />
         <entry key="..\:/Users/P51/Desktop/Code/CCM/app/src/main/res/layout/activity_main.xml" value="0.2942708333333333" />
         <entry key="..\:/Users/P51/Desktop/Code/CCM/app/src/main/res/layout/activity_survey.xml" value="0.2942708333333333" />
         <entry key="..\:/Users/P51/Desktop/Code/CCM/app/src/main/res/layout/fragment_q3questions.xml" value="0.2942708333333333" />

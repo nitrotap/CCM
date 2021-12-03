@@ -3,14 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:paddingTop="36dp"
     tools:context=".qYear">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="100dp"
-        android:orientation="vertical"
-        android:paddingTop="100dp">
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/textView_qyear"

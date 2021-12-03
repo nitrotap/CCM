@@ -7,8 +7,15 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -20,6 +27,8 @@ public class surveyEnd extends Fragment {
 
     public static String surveyUserAnswers;
     public static long surveyEndTime = System.currentTimeMillis();
+    public static long surveyTime;
+    public static int score;
 
     public static ArrayList<String> surveyAnswers;
 
@@ -27,12 +36,6 @@ public class surveyEnd extends Fragment {
         // Required empty public constructor
     }
 
-    public static surveyEnd newInstance(String param1, String param2) {
-        surveyEnd fragment = new surveyEnd();
-        Bundle args = new Bundle();
-        fragment.setArguments(args);
-        return fragment;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -48,7 +51,7 @@ public class surveyEnd extends Fragment {
 
         TextView textView = view.findViewById(R.id.textView_surveyanswers);
 
-        long surveyTime = (surveyEndTime - SurveyActivity.surveyStartTime) / 1000;
+        surveyTime = (surveyEndTime - SurveyActivity.surveyStartTime) / 1000;
 
         Date date = new Date();
         Calendar calendar = new GregorianCalendar();
@@ -56,45 +59,114 @@ public class surveyEnd extends Fragment {
         int year = calendar.get(Calendar.YEAR);
         String dayOfWeek = String.valueOf(calendar.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.getDefault()));
 
-        surveyUserAnswers = "Day of week: " + qDayofweek.answer_dayofweek + "          Correct Answer: " + dayOfWeek +
+        surveyUserAnswers = "Day of week: " + qDayofweek.answer_dayofweek +
+                "\nCorrect Answer: " + dayOfWeek + "\n" +
                 "\nGrandiose Thoughts: " + qGrandthoughts.answer_qgrand +
                 "\nHappy Speed of Thoughts: " + qSpeedofthought.answer_qthoughtshappy +
                 "\nSad Speed of Thoughts: " + qSpeedofthought.answer_qthoughtssad +
-                "\nYear: " + qYear.answer_qyear + "     Correct Answer: " + year +
-                "\nTime Taken: " + surveyTime + " seconds";
+                "\nBrain Fog: " + qBrainfog.answer_qbrainfog + "\n" +
+                "\nYear: " + qYear.answer_qyear + "\nCorrect Answer: " + year + "\n" +
+                "\nTime Taken: " + surveyTime + " seconds" + "\n\n" +
+                "\n3 Objects Question" +
+                "\nYour First Answers: \n" + q3questions.q3questionsanswer1 + " " + q3questions.q3questionsanswer2 + " " + q3questions.q3questionsanswer3 +
+                "\n\nYour Second Answers: \n" + q3questions_repeat.q3repeatanswer1 + " " + q3questions_repeat.q3repeatanswer2 + " " + q3questions_repeat.q3repeatanswer3
+        ;
         textView.setText(surveyUserAnswers);
 
-        int score = 0;
+        score = 0;
         if (qDayofweek.answer_dayofweek.equals(dayOfWeek)) {
             score++;
         }
-        if (qGrandthoughts.answer_qgrand.equals("Yes")) {
+        if (qGrandthoughts.answer_qgrand.equals("No")) {
             score++;
         }
-        if (qSpeedofthought.answer_qthoughtssad.equals("Yes")) {
+        if (qSpeedofthought.answer_qthoughtssad.equals("No")) {
             score++;
         }
-        if (qSpeedofthought.answer_qthoughtshappy.equals("Yes")) {
+        if (qSpeedofthought.answer_qthoughtshappy.equals("No")) {
             score++;
         }
-        if (surveyTime > 60) {
+        if (qBrainfog.answer_qbrainfog.equals("No")) {
+            score++;
+        }
+        if (surveyTime < 60) {
+            score++;
+        }
+        if (q3questions.q3questionsanswer1.equals(q3questions_repeat.q3repeatanswer1) || q3questions.q3questionsanswer1.equals(q3questions_repeat.q3repeatanswer2) || q3questions.q3questionsanswer1.equals(q3questions_repeat.q3repeatanswer3)) {
+            score++;
+        }
+        if (q3questions.q3questionsanswer2.equals(q3questions_repeat.q3repeatanswer1) || q3questions.q3questionsanswer2.equals(q3questions_repeat.q3repeatanswer2) || q3questions.q3questionsanswer2.equals(q3questions_repeat.q3repeatanswer3)) {
+            score++;
+        }
+        if (q3questions.q3questionsanswer3.equals(q3questions_repeat.q3repeatanswer1) || q3questions.q3questionsanswer3.equals(q3questions_repeat.q3repeatanswer2) || q3questions.q3questionsanswer3.equals(q3questions_repeat.q3repeatanswer3)) {
             score++;
         }
 
+
         String grade;
-        if (score >= 4) {
-            grade = "Severe Cognitive Impairment";
-        } else if (score >= 1) {
-            grade = "Mild Cognitive Impairment";
+        if (score >= 6) {
+            grade = "No Cognitive Impairment" + "\nScore: " + score;
+        } else if (score >= 3) {
+            grade = "Mild Cognitive Impairment" + "\nScore: " + score;
         } else {
-            grade = "No Cognitive Impairment";
+            grade = "Sever Cognitive Impairment" + "\nScore: " + score;
         }
 
         TextView textView1 = view.findViewById(R.id.textView_surveygrade);
         textView1.setText(grade);
 
+        try {
+            setJson();
+        } catch (Exception e) {
+            Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_LONG).show();
+        }
+
+        Button button = view.findViewById(R.id.button_surveyend);
+        button.setOnClickListener(view1 -> {
+
+
+            try {
+                getActivity().onBackPressed();
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        });
+
+
         return view;
     }
+
+    public void setJson() {
+        JSONObject jsonObject = new JSONObject();
+        try {
+            jsonObject.put("Year", qYear.answer_qyear);
+            jsonObject.put("Day of Week", qDayofweek.answer_dayofweek);
+            jsonObject.put("Grandiose Thoughts", qGrandthoughts.answer_qgrand);
+            jsonObject.put("HappySpeed", qSpeedofthought.answer_qthoughtshappy);
+            jsonObject.put("SadSpeed", qSpeedofthought.answer_qthoughtssad);
+            jsonObject.put("q3objects", q3questions.q3questionsanswer1 + " " + q3questions.q3questionsanswer2 + " " + q3questions.q3questionsanswer3);
+            jsonObject.put("q3objects_repeat", q3questions_repeat.q3repeatanswer1 + " " + q3questions_repeat.q3repeatanswer2 + " " + q3questions_repeat.q3repeatanswer3);
+            jsonObject.put("Score Answer", score);
+            jsonObject.put("Time Taken", surveyTime);
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            BufferedWriter fos = new BufferedWriter(new FileWriter(getActivity().getExternalFilesDir(null) + "/" + "answerDatabase.txt", true));
+            fos.write(String.valueOf(jsonObject));
+            fos.newLine();
+            fos.close();
+            Toast.makeText(getActivity(), "Saved: All Answers", Toast.LENGTH_LONG).show();
+        } catch (Exception e) {
+            Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_LONG).show();
+        }
+    }
+
+
+
+
 
 
 }
