@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Chronic Condition Management</string>
+    <string name="app_name">CCM</string>
     <string name="beginSurvey">Begin Survey</string>
     <string name="mainScreenStr">Main Menu</string>
     <string name="ccmExplanation">A brief survey to annotate cognition</string>
@@ -37,8 +37,5 @@
     <string name="qspeedhappy">Are the happy feelings speeding up your thought process today?</string>
     <string name="qspeedsad">Are the sad feelings slowing down your thought process today?</string>
     <string name="qbrainfog">Are you experiencing any brain fog today?</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
 
 </resources>
